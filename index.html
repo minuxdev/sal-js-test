@@ -5,27 +5,313 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webpage 1</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sal.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     
     <div class="container">
-
+        <!-- HEADER -->
         <header>
-            <a href="#" class="logo">Minux Dev</a>
-            <div class="toggle"></div>
+            <a href="#" class="logo">IE.LDA</a>
+            <div class="toggle" onclick="toggleControl('.toggle','.container','.sidebar');"></div>
         </header>
-        <section class="banner">
+
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <ul>
+                <li  onclick="toggleControl('.toggle','.container','.sidebar');"><a href="#home">Home</a></li>
+                <li  onclick="toggleControl('.toggle','.container','.sidebar');"><a href="#about">About</a></li>
+                <li  onclick="toggleControl('.toggle','.container','.sidebar');"><a href="#services">Services</a></li>
+                <li  onclick="toggleControl('.toggle','.container','.sidebar');"><a href="#client">Clients</a></li>
+                <li  onclick="toggleControl('.toggle','.container','.sidebar');"><a href="#testimonials">Testimonials</a></li>
+                <li  onclick="toggleControl('.toggle','.container','.sidebar');"><a href="#team">Team</a></li>
+                <li  onclick="toggleControl('.toggle','.container','.sidebar');"><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+        <!-- BANNER -->
+        <section class="banner" id="home">
             <img src="images/bg.jpg" alt="background">
-            <section class="banner-content">
-                <h2>Be smart, Be ahead</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat exercitationem dolorum cumque reprehenderit. Nostrum sequi consequatur quibusdam culpa expedita. Nulla assumenda in officiis possimus. Praesentium ipsa quae vel iste dolor.</p>
+            <section class="banner-content" >
+                <h2 class="section-heading" data-sal="slide-right"
+        data-sal-duration="600">Informatica e Electricidade</h2>
+                <p class="section-text" data-sal="slide-left"
+        data-sal-duration="600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat exercitationem dolorum cumque reprehenderit. Nostrum sequi consequatur quibusdam culpa expedita. Nulla assumenda in officiis possimus. Praesentium ipsa quae vel iste dolor.
+                </p>
             </section>
         </section>
 
+        <!-- ABOUT -->
+        <section class="about main-section" id="about">
+            <div class="about-content" data-sal="slide-down"
+        data-sal-duration="600">
+                <h2 class="section-heading" >Um pouco sobre a IE.LDA</h2>
+                <p class="section-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eius! Atque laudantium iusto dolor modi debitis eveniet facilis animi molestias doloremque, quia reiciendis voluptatum sapiente alias asperiores vel ea omnis minus esse ut, rerum tempore excepturi autem! Atque laudantium exercitationem nulla dolores, mollitia dolorem cum. Temporibus vitae sapiente assumenda ratione.
+                </p>
+                <p class="section-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto sapiente unde sunt nam ratione iste natus sint impedit asperiores nisi quaerat consequatur recusandae cupiditate laboriosam in, laborum saepe minima, quam ipsa distinctio veritatis eveniet.
+                </p>
+            </div>
+            <figure class="about-image" data-sal="slide-up"
+        data-sal-duration="600">
+                <img src="images/tec-el.jpg" alt="ie.lda tecnic">
+            </figure>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services main-section" id="services">
+            <div class="service-content" data-sal="slide-right"
+            data-sal-duration="600">
+                <h2 class="section-heading"> O que fazemos</h2>
+                <p class="section-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil deleniti laudantium odit sunt nisi eum voluptatem itaque aperiam veritatis, soluta natus! Consequatur eius, sunt excepturi ex consequuntur architecto! Nemo magni hic molestias aliquam illo placeat. Velit quasi deleniti debitis minima doloremque corporis amet voluptatum tempora nobis blanditiis. Animi, sed obcaecati.
+                </p>
+            </div>
+            <div class="service-cards" data-sal="zoom-out"
+            data-sal-duration="600">
+                <div class="card" data-sal="slide-up"
+                data-sal-duration="600">
+                    <figure class="card-image">
+                        <img src="images/bg.jpg" alt="contros">
+                    </figure>
+                    <h3 class="card-title">Informatica</h3>
+                </div>
+
+                <div class="card" data-sal="slide-down"
+                data-sal-duration="600">
+                    <figure class="card-image">
+                        <img src="images/tec-el.jpg" alt="contros">
+                    </figure>
+                    <h3 class="card-title">Instalacoes</h3>
+                </div>
+
+                <div class="card" data-sal="slide-up"
+                data-sal-duration="600">
+                    <figure class="card-image">
+                        <img src="images/elect-control.jpg" alt="contros">
+                    </figure>
+                    <h3 class="card-title">Auditoria</h3>
+                </div>
+
+                <div class="card" data-sal="slide-down"
+                data-sal-duration="600">
+                    <figure class="card-image">
+                        <img src="images/elect-control.jpg" alt="contros">
+                    </figure>
+                    <h3 class="card-title">Acessoria</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECNOLOGY -->
+        <section class="tecnology main-section"  id="tecnology">
+            <div class="tecnology-cards" data-sal="slide-right"
+            data-sal-duration="600">
+                <div class="card">
+                    <figure class="card-image">
+                        <img src="images/icons/bxl-jquery.svg" alt="contros">
+                    </figure>
+                    <h3 class="card-title">HTML5</h3>
+                </div>
+                <div class="card">
+                    <figure class="card-image">
+                        <img src="images/icons/bxl-flutter.svg" alt="contros">
+                    </figure>
+                    <h3 class="card-title">CSS3</h3>
+                </div>
+                <div class="card">
+                    <figure class="card-image">
+                        <img src="images/icons/bxl-javascript.svg" alt="contros">
+                    </figure>
+                    <h3 class="card-title">JS</h3>
+                </div>
+                <div class="card">
+                    <figure class="card-image">
+                        <img src="images/icons/bxl-php.svg" alt="contros">
+                    </figure>
+                    <h3 class="card-title">PHP5</h3>
+                </div>
+            </div>
+
+            <div class="tecnology-content" data-sal="slide-down"
+            data-sal-duration="600">
+                <h2 class="section-heading">Usamos tecnologia moderna</h2>
+                <p class="section-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil deleniti laudantium odit sunt nisi eum voluptatem itaque aperiam veritatis, soluta natus! Consequatur eius, sunt excepturi ex consequuntur architecto! Nemo magni hic molestias aliquam illo placeat. Velit quasi deleniti debitis minima doloremque corporis amet voluptatum tempora nobis blanditiis. Animi, sed obcaecati.
+                </p>
+            </div>
+
+            <figure class="tecnology-image">
+                <img src="images/inf-banner.jpg" alt="ie.lda tecnic">
+            </figure>
+        </section>
+
+        <!-- CLIENTS -->
+        <section class="clients main-section" id="client">
+            <div class="client-content">
+                <h2 class="section-heading" >Nossos fieis clientes</h2>
+                <p class="section-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil deleniti laudantium odit sunt nisi eum voluptatem itaque aperiam veritatis, soluta natus! Consequatur eius, sunt excepturi ex consequuntur architecto! Nemo magni hic molestias aliquam illo placeat. Velit quasi deleniti debitis minima doloremque corporis amet voluptatum tempora nobis blanditiis. Animi, sed obcaecati.
+                </p>
+            </div>
+
+            <div class="client-cards" data-sal="zoom-in"
+            data-sal-duration="600">
+                <div class="card">
+                    <figure class="card-image">
+                        <img src="images/brand4.png" alt="contros">
+                    </figure>
+                </div>
+
+                <div class="card">
+                    <figure class="card-image">
+                        <img src="images/brand3.png" alt="contros">
+                    </figure>
+                </div>
+
+                <div class="card">
+                    <figure class="card-image">
+                        <img src="images/brand1.png" alt="contros">
+                    </figure>
+                </div>
+
+                <div class="card">
+                    <figure class="card-image">
+                        <img src="images/brand2.png" alt="contros">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials main-section" id="testimonials">
+            <h2 class="section-heading">What our clients talk aboout us</h2>
+            <div class="container">
+                <div class="comment" data-sal="slide-up"
+                data-sal-duration="600">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod voluptates minus unde voluptas error. Expedita consequuntur officia cum at nihil, quisquam saepe facilis qui, incidunt assumenda eveniet deleniti fugit? Corporis.
+                    </p>
+                    <h3>Minux Dev</h3>
+                </div>
+                <div class="comment" data-sal="zoom-in"
+                data-sal-duration="600">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod voluptates minus unde voluptas error. Expedita consequuntur officia cum at nihil, quisquam saepe facilis qui, incidunt assumenda eveniet deleniti fugit? Corporis ntur officia cum at nihil, quisquam saepe facilis qui, incidunt a.
+                    </p>
+                    <h3>__minux__</h3>
+                </div>
+                <div class="comment" data-sal="slide-down"
+                data-sal-duration="600">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod voluptates minus unde voluptas error. Expedita consequuntur officia cum at nihil, quisquam saepe facilis qui, incidunt assumenda eveniet deleniti fugit? Corporis.
+                    </p>
+                    <h3>Minux Dev</h3>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- TEAM MEMBERS -->
+        <section class="team main-section" id="team">
+            <div class="content" data-sal="slide-up"
+            data-sal-duration="600">
+                <h2 class="section-heading">Meet our team members</h2>
+                <p  class="section-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla amet recusandae incidunt praesentium, adipisci ipsam ut sed ab alias, dolore quaerat, natus voluptates aliquid maiores. Quibusdam officia ab amet, nulla eveniet eos impedit aliquid voluptas suscipit dolor sit omnis facere autem quam mollitia minima sunt ipsa aspernatur molestiae dolores!
+                </p>
+                <p  class="section-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla amet recusandae incidunt praesentium, adipisci ipsam ut sed ab alias, dolore quaerat, natus voluptates aliquid maiores. Quibusdam officia ab amet, nulla eveniet eos impedit aliquid voluptas suscipit dolor sit omnis facere autem quam mollitia minima sunt ipsa aspernatur molestiae dolores!
+                </p>
+            </div>
+            <div class="team-cards" data-sal="zoom-in"
+            data-sal-duration="600">
+                <div class="member">
+                    <figure><img src="images/1.jpg" alt=""></figure>
+                    <h3>Carla da Gloria</h3>
+                    <h4>Projects Analist</h4>
+                </div>
+                <div class="member">
+                    <figure><img src="images/2.jpg" alt=""></figure>
+                    <h3>Minux Midi</h3>
+                    <h4>CEO & TI Senior</h4>
+                </div>
+                <div class="member">
+                    <figure><img src="images/3.jpg" alt=""></figure>
+                    <h3>Ernesto Mickhoms</h3>
+                    <h4>Electric Engeneear</h4>
+                </div>
+                <div class="member">
+                    <figure><img src="images/4.jpg" alt=""></figure>
+                    <h3>Cleusia Fausto</h3>
+                    <h4>Marketing Header</h4>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- CONTACTS -->
+        <section class="contacts main-section" id="contacts">
+            <div class="contact-text">
+
+                <h2  class="section-heading">Contact us</h2>
+    
+                <p  class="section-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla amet recusandae incidunt praesentium, adipisci ipsam ut sed ab alias, dolore quaerat, natus voluptates aliquid maiores. Quibusdam officia ab amet, nulla eveniet eos impedit aliquid voluptas suscipit dolor sit omnis facere autem quam mollitia minima sunt ipsa aspernatur molestiae dolores!
+                </p>
+            </div>
+
+            <div class="form-wrap">
+                <form class="form">
+                    <input type="text" placeholder="Company or Full Name">
+                    <input type="email" placeholder="Email">
+                    <input type="tel" placeholder="Phone number">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Type your message here..."></textarea>
+                    <input type="submit" value="Submit" id="submit"> 
+                </form>
+                <figure class="form-img">
+                    <img src="images/4.jpg" alt="">
+                </figure>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <p class="section-text">
+                Designed by : <a href="#">Minux-team</a>
+            </p>
+            <p class="section-text copyrights">Copyrights &copy; 2022</p>
+            <div class="footer-icons">
+                <p class="section-text">
+                    Follow us on :
+                </p>
+                <ul>
+                    <li>
+                        <a href="#"><img src="images/facebook.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/twitter.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/linkedin.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            
+        </footer>
+        
     </div>
 
-
+    <script src="javascript/sal.js"></script>
+    <script src="javascript/script.js"></script>
+    <script>
+        sal({once: false,});
+        headerSticky('header');
+    </script>
 
 </body>
 </html>
